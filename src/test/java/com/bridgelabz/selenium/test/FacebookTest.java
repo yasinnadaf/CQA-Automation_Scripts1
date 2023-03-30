@@ -10,7 +10,7 @@ import java.util.List;
 
 public class FacebookTest extends BaseClass {
     @Test
-        public void TestFacebook(){
+        public void TestFacebook() throws InterruptedException {
 //        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
 //        ChromeDriver driver = new ChromeDriver();
 
@@ -18,25 +18,25 @@ public class FacebookTest extends BaseClass {
         driver.navigate().to("https://www.facebook.com/");
         driver.manage().window().maximize();
 
-//        driver.findElement(By.linkText("Forgotten password?")).click();
-//        driver.navigate().back();
-//        System.out.println("Title of the application: "+ driver.getTitle());
-//        System.out.println("Current url of the application: "+ driver.getCurrentUrl());
-//        System.out.println("Page source of the application: "+ driver.getPageSource());
+        driver.findElement(By.linkText("Forgotten password?")).click();
+        driver.navigate().back();
+        System.out.println("Title of the application: "+ driver.getTitle());
+        System.out.println("Current url of the application: "+ driver.getCurrentUrl());
+        System.out.println("Page source of the application: "+ driver.getPageSource());
 
-//        driver.findElement(By.id("email")).sendKeys("Bridgelabz@");
-//        Thread.sleep(1000);
-//        driver.findElement(By.id("pass")).sendKeys("ayzz");
-//        Thread.sleep(1000);
+        driver.findElement(By.id("email")).sendKeys("Bridgelabz@");
+        Thread.sleep(1000);
+        driver.findElement(By.id("pass")).sendKeys("ayzz");
+        Thread.sleep(1000);
 
-//        driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("Bridgelabz");//Relative xPath
-//        Thread.sleep(1000);
-////        driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/div/div/div/div[2]/div/div[1]/form/div[1]/div[1]/input"));
-//        Thread.sleep(1000);
+        driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("Bridgelabz");//Relative xPath
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[1]/div/div/div/div[2]/div/div[1]/form/div[1]/div[1]/input"));
+        Thread.sleep(1000);
 
-//        WebElement userName = driver.findElement(By.xpath("//*[@id=\"email\"]"));
-//        userName.sendKeys("Bridgelabz");  // again again if we want to use then we can
-//        userName.getText();
+        WebElement userName = driver.findElement(By.xpath("//*[@id=\"email\"]"));
+        userName.sendKeys("Bridgelabz");  // again again if we want to use then we can
+        userName.getText();
 
         WebElement loginBtn = driver.findElement(By.name("login"));
         System.out.println("Login text: "+ loginBtn);   //it will give text of login
